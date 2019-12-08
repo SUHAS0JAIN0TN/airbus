@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index page</title>
+</head>
+{% load static %}
+<body style="background-image: url({% static 'images/OG1FLx.jpg' %})">
+	<div>
+		<a href="{% url 'login' %}"><div>Login</div></a>
+		<a href="{% url 'signup' %}"><div>Signup</div></a>
+		{{usfo.as_table}}<br>
+		
+	</div>
+</body>
+</html>
