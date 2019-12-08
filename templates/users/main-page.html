@@ -11,10 +11,11 @@
 {% load static %}
 <body style="background-image: url({% static 'users/flight1320x742.jpg' %});width: 1000px; margin: 0 auto;">
 	<div>
+		<div></div>
 		<div style="margin-top: 30px; float: right;">
 
-			<a href="{% url 'login' %}"><div style="display: inline-block;font-size: 25px; margin-right: 10px;color: red;">Login</div></a>
-			<a href="{% url 'signup' %}"><div style="display: inline-block;font-size: 25px; margin-right: 10px;color: red;">Signup</div></a>
+			<a href="{% url 'login' %}"><div style="display: inline-block;font-size: 25px; margin-right: 10px;color: red;">Bookings</div></a>
+			<a href="{% url 'logout' %}"><div style="display: inline-block;font-size: 25px; margin-right: 10px;color: red;">Logout</div></a>
 
 		</div>
 		<!-- <a href="{% url 'logout' %}">Logout</a> -->

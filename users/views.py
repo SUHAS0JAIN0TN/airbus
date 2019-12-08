@@ -24,7 +24,7 @@ def login(request):
 				if user.is_active:
 					auth_login(request,user)
 					print(request.user.name,request.user.email)
-					return HttpResponseRedirect(reverse('simp'))
+					return HttpResponseRedirect(reverse('main_page'))
 				else:
 					return HttpResponse("Your account is inactive.")
 	return render(request,'users/login.html',{'usfo':usfo})
@@ -43,7 +43,18 @@ def signup(request):
 			us.set_password(usfo.clean_password2())
 			us.save()
 			auth_login(request,us)
-			return HttpResponseRedirect(reverse('simp'))
+			return HttpResponseRedirect(reverse('main_page'))
 		else:
 			print(usfo.errors)
 	return render(request,'users/signup.html',{'usfo':usfo})
+
+
+
+def logout_view(request):
+	logout(request)
+	return HttpResponseRedirect(reverse('index'))
+
+
+@login_required
+def main_page(request):
+	return render(request,'users/main-page.html',{})
