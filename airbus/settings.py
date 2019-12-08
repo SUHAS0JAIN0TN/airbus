@@ -25,7 +25,7 @@ SECRET_KEY = '+bdxuf&(vy4=wf6s5!9u4i!cs$kk=$7z$=y^f7=mtbvfw)3!k@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['immense-taiga-59262.herokuapp.com']
+ALLOWED_HOSTS = ['immense-taiga-59262.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'airbus.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd1a63ai7g94q9u',
+        'USER': 'rgrbowchhwnbnz',
+        'HOST': 'ec2-54-235-181-55.compute-1.amazonaws.com',
+        'PORT': '5432',
+        'PASSWORD': 'c4a7a4c0c95e19879debe799d94021ed9c58f5e354e7595ca5dc79ccb4ff8c2c',
     }
 }
 
