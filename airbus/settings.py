@@ -25,7 +25,7 @@ SECRET_KEY = '+bdxuf&(vy4=wf6s5!9u4i!cs$kk=$7z$=y^f7=mtbvfw)3!k@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['immense-taiga-59262.herokuapp.com']
 
 
 # Application definition
