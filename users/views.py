@@ -57,4 +57,4 @@ def logout_view(request):
 
 @login_required
 def main_page(request):
-	return render(request,'users/main-page.html',{})
+	return render(request,'users/main-page.html',{'name':request.user.name})
